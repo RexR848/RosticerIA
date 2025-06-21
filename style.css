@@ -1,0 +1,238 @@
+/* Reset de elementos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Encabezado y Navegación */
+header {
+  background-color: #800013;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 24px;
+  color: #FFD300;
+  text-shadow: 1px 1px #000;
+}
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li {
+  margin-left: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #FFD300;
+}
+
+/* Sección Hero (Inicio) */
+.hero {
+  position: relative;
+  text-align: center;
+}
+.hero img {
+  width: 100%;
+  display: block;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.hero-text h1 {
+  font-size: 48px;
+  font-family: 'Anton', sans-serif;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 24px;
+  background: rgba(0,0,0,0.4);
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+/* Secciones Generales */
+section {
+  padding: 40px 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  color: #800013;
+}
+
+/* Elementos del Menú, Promociones y Tienda */
+.menu-items,
+.shop-items,
+.promos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.menu-items .item,
+.promos .promo-item,
+.shop-items .shop-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 200px;
+  text-align: center;
+  padding: 15px;
+}
+.menu-items .item img,
+.promos .promo-item img,
+.shop-items .shop-item img {
+  max-width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+.item h3,
+.promo-item h3,
+.shop-item h3 {
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+}
+.price {
+  font-size: 20px;
+  color: #800013;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.promo-item p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.add-to-cart {
+  background-color: #800013;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.add-to-cart:hover {
+  background-color: #a00020;
+}
+
+/* Carrito de Compras */
+#cart {
+  margin-top: 20px;
+  background: #fffbe6;
+  border: 1px solid #FFD300;
+  padding: 10px;
+}
+#cart h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #800013;
+}
+#cart-items {
+  list-style: disc inside;
+}
+#cart-items li {
+  margin: 5px 0;
+}
+
+/* Formulario de Contacto */
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+#contacto label {
+  font-weight: bold;
+}
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#contacto button {
+  background-color: #800013;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#contacto button:hover {
+  background-color: #a00020;
+}
+
+/* Pie de página */
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #555;
+}
+footer a {
+  color: #800013;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: menú móvil */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: #FFD300;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #800013;
+  }
+  nav ul.open {
+    display: flex;
+  }
+  nav li {
+    margin: 10px 0;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+  }
+  .hero-text p {
+    font-size: 18px;
+  }
+}
